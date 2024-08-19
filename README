@@ -1,0 +1,47 @@
+Ciopa Cristian-Mihai -- Backend – Predict next 3 values of Stock price
+
+
+Rulare:
+
+	--> ierarhie:
+		* output(directory)
+		* stock_price_data_files(directory)
+		* calculate_stockprice.py
+		* README
+		
+	--> Necesita utilizarea utilitarului "pip":
+			check: pip --version
+			install: Download "get-pip.py"
+					python get-pip.py
+	
+	--> Pentru rulare: pip install pandas (biblioteca pandas)
+
+	--> Proiectul a fost conceput pe o masina de Windows cu python version 3.12.0
+	
+
+Biblioteci:
+
+	--> os si glob sunt folosite pentru a curata directorul output, inainte de fiecare rulare.
+	
+	--> csv ajuta la scrierea si citirea din fisierele csv.
+	
+	--> random ajuta la generarea numarului aleator de unde se vor citii cele 10 valori
+	
+	--> pandas este utilizat pentru rescrierea ultimelor valori(calculate cu logica de predictie)
+	
+	
+Functii:
+
+	--> read_input: Ajuta la cititrea numarului de file-uri care trebuie gestionat
+	
+	--> write_output: Citirea incepe de la valoarea "random" atribuita fiecarui file.
+					Muta cele 13 valori din "i_path"(acesta este stabilit in functie de numarul de file-uri folosite) in "o_path".
+					Returneaza cele 3 noi valori calculate, folosind functia estimate_value_3.
+					
+	--> estimate_value_3: Calculeaza cele 3 noi valori bazate pe logica de predictie prezentata in pdf.
+	
+	--> update_last_3_val: Schimba valorile 11, 12, 13 cu cele 3 noi valori calculate.
+	
+	--> calculate_array_10: Apeleaza functiile de mai sus pentru fiecare file in parte.
+	
+	--> cleanup: Curata directorul "output" inainte de rularea programului in cazul unor fisiere mai vechi.
