@@ -15,6 +15,9 @@ Rulare:
 					python get-pip.py
 	
 	--> Pentru rulare: pip install pandas (biblioteca pandas)
+		./calculate_stockprice.py
+		or
+		python calculate_stockprice.py
 
 	--> Proiectul a fost conceput pe o masina de Windows cu python version 3.12.0
 	
@@ -35,8 +38,8 @@ Functii:
 	--> read_input: Ajuta la cititrea numarului de file-uri care trebuie gestionat
 	
 	--> write_output: Citirea incepe de la valoarea "random" atribuita fiecarui file.
-					Muta cele 13 valori din "i_path"(acesta este stabilit in functie de numarul de file-uri folosite) in "o_path".
-					Returneaza cele 3 noi valori calculate, folosind functia estimate_value_3.
+	Muta cele 13 valori din "i_path"(acesta este stabilit in functie de numarul de file-uri folosite) in "o_path".
+	Returneaza cele 3 noi valori calculate, folosind functia estimate_value_3.
 					
 	--> estimate_value_3: Calculeaza cele 3 noi valori bazate pe logica de predictie prezentata in pdf.
 	
